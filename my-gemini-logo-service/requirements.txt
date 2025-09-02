@@ -1,2 +1,4 @@
-banana-dev
+Flask
 python-dotenv
+Flask-Cors
+huggingface_hub

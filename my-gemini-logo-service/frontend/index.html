@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Logo Generator - Stable Diffusion</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <header class="text-center mb-5">
+                    <h1 class="display-4">AI Logo Generator</h1>
+                    <p class="lead">Powered by Stable Diffusion & Hugging Face</p>
+                </header>
+
+                <div class="row">
+                    <!-- Form Column -->
+                    <div class="col-md-5">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Describe Your Logo</h5>
+                                <form id="logo-form">
+                                    <div class="mb-3">
+                                        <label for="business_name" class="form-label">Business Name</label>
+                                        <input type="text" class="form-control" id="business_name" placeholder="e.g., Luna Pets" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="style" class="form-label">Style</label>
+                                        <input type="text" class="form-control" id="style" placeholder="e.g., minimalist, geometric" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="colors" class="form-label">Primary Colors</label>
+                                        <input type="text" class="form-control" id="colors" placeholder="e.g., deep blue, gold" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="symbols" class="form-label">Key Symbols or Ideas</label>
+                                        <input type="text" class="form-control" id="symbols" placeholder="e.g., moon, wolf silhouette" required>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button type="submit" id="generate-btn" class="btn btn-primary btn-lg">
+                                            Generate Logo
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result Column -->
+                    <div class="col-md-7">
+                        <div id="result-container" class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <!-- Loading Spinner -->
+                                <div id="loading-spinner" class="spinner-border text-primary" role="status" style="display: none;">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <!-- Image Output -->
+                                <div id="logo-output">
+                                    <img id="logo-image" src="https://via.placeholder.com/512x512.png?text=Your+Logo+Will+Appear+Here" class="img-fluid rounded" alt="Generated Logo">
+                                </div>
+                                <p id="result-message" class="text-muted mt-3">Enter your details and click generate!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
