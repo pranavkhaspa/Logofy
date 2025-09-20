@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingSpinner = document.getElementById('loading-spinner');
     const resultMessage = document.getElementById('result-message');
 
-    const API_URL = 'http://127.0.0.1:5000/generate-logo';
+    const API_URL = '/generate-logo';
 
     logoForm.addEventListener('submit', async (e) => {
         e.preventDefault();
